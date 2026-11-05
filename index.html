@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sort Numbers (Large to Small)</title>
+</head>
+<body>
+
+    <h2>Enter 10 Numbers</h2>
+
+    <input type="number" id="num1"><br><br>
+    <input type="number" id="num2"><br><br>
+    <input type="number" id="num3"><br><br>
+    <input type="number" id="num4"><br><br>
+    <input type="number" id="num5"><br><br>
+    <input type="number" id="num6"><br><br>
+    <input type="number" id="num7"><br><br>
+    <input type="number" id="num8"><br><br>
+    <input type="number" id="num9"><br><br>
+    <input type="number" id="num10"><br><br>
+
+    <button onclick="sortNumbers()">Sort</button>
+
+    <h3 id="result"></h3>
+
+    <script>
+        function sortNumbers() {
+            let numbers = [
+                Number(document.getElementById("num1").value),
+                Number(document.getElementById("num2").value),
+                Number(document.getElementById("num3").value),
+                Number(document.getElementById("num4").value),
+                Number(document.getElementById("num5").value),
+                Number(document.getElementById("num6").value),
+                Number(document.getElementById("num7").value),
+                Number(document.getElementById("num8").value),
+                Number(document.getElementById("num9").value),
+                Number(document.getElementById("num10").value)
+            ];
+
+            numbers.sort((a, b) => b - a);
+
+            document.getElementById("result").innerHTML =
+                "Descending Order: " + numbers.join(", ");
+        }
+    </script>
+
+</body>
+</html>
